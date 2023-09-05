@@ -54,3 +54,13 @@ console.log(me.shoeCount);
 me.favoriteColor = 'Green';
 console.log(me);
 console.log(me.favoriteColor);
+
+// Add object info to the DOM
+let aboutMe = document.querySelector(`#about-me`);
+aboutMe.innerHTML = '';
+aboutMe.innerHTML = `
+<h2>About ${fullName}</h2>
+<p>${me.firstName} has ${me.shoeCount} pairs of shoes</p>
+<p>${me.firstName}'s three favorite foods are ${me.favThreeFoods.join(', ').toLowerCase()}</p>
+<p>${me.firstName}'s favorite color is ${me.favoriteColor}</p>
+`;
